@@ -5,13 +5,14 @@ def lee_entrenos_test(ruta):
     lista_entrenos = lee_entrenos(ruta)
 
     print("-" * 30)
-    print("Probando la función lee_entrenos...")
-    for entreno in lista_entrenos:
-        print(entreno)
+    print("\nProbando la función lee_entrenos...")
+    print("Imprimiendo los primeros 3 entrenos...\n")
+    for entreno in lista_entrenos[1:4]:
+        print(entreno, "\n")
     print("-" * 30)
 
     return lista_entrenos
-        
+
 
 def tipos_entrenos_test(entrenos):
     tipos = tipos_entrenos(entrenos)
@@ -44,7 +45,7 @@ def suma_calorias_test(lista_entrenos, f_inicio, f_fin):
 if __name__ == "__main__":
 
     lista_entrenos = lee_entrenos("data/entrenos.csv")
-    # lee_entrenos_test("data/entrenos.csv")
-    tipos_entrenos_test(lista_entrenos)
+    lee_entrenos_test("data/entrenos.csv")
+    # tipos_entrenos_test(lista_entrenos)
     # entrenos_duracion_superior_test(lista_entrenos, 115)
-    suma_calorias_test(lista_entrenos, "5/5/2019", "10/10/2019")
+    # suma_calorias_test(lista_entrenos, "5/5/2019", "10/10/2019")
